@@ -9,27 +9,27 @@ let plusSign = Array.from(document.getElementsByClassName("plus"))
 let businessText = document.querySelectorAll(".business-text")
 
 
-let plusIds = ["plus-sign1","plus-sign2","plus-sign3"];
+// let plusIds = ["plus-sign1","plus-sign2","plus-sign3"];
 
-plusIds.forEach((id)=>{
-let myElement = document.getElementById(id)
-let iTag = myElement.querySelector(".fa-plus");
-let Text = myElement.querySelector(".business-text")
-myElement.addEventListener("click",changeTagDisplay)
+// plusIds.forEach((id)=>{
+// let myElement = document.getElementById(id)
+// let iTag = myElement.querySelector(".fa-plus");
+// let Text = myElement.querySelector(".business-text")
+// myElement.addEventListener("click",changeTagDisplay)
 
- function changeTagDisplay(e)  {
-  if(e.target.id === id && iTag.classList.contains("fa-plus")){
-    iTag.classList.remove("fa-plus");
-    iTag.classList.add("fa-minus");
+//  function changeTagDisplay(e)  {
+//   if(e.target.id === id && iTag.classList.contains("fa-plus")){
+//     iTag.classList.remove("fa-plus");
+//     iTag.classList.add("fa-minus");
     
-  }
-  else if(iTag.classList.contains("fa-minus")){
-     iTag.classList.remove("fa-minus");
-     iTag.classList.add("fa-plus")
-  }
+//   }
+//   else if(iTag.classList.contains("fa-minus")){
+//      iTag.classList.remove("fa-minus");
+//      iTag.classList.add("fa-plus")
+//   }
 
- }
-}) 
+//  }
+// }) 
 
 
 
@@ -103,4 +103,4 @@ function changeBgOnScroll (){
 
   })
 
-
+window.addEventListener("")
