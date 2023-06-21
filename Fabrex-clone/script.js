@@ -2,30 +2,6 @@ let menu = document.getElementsByClassName("menu")[0];
 let searchBtnClose = Array.from(document.getElementsByTagName("i"));
 let links = Array.from(document.querySelectorAll(" .menu li a"));
 
-document.addEventListener("DOMContentLoaded", function () {
-  let accordionItems = document.getElementsByClassName("accordion-text");
-
-  for (let i = 0; i < accordionItems.length; i++) {
-    accordionItems[i].addEventListener("click", () => {
-      let showText = accordionItems[i].nextElementSibling;
-      let isOpen = accordionItems[i].classList.contains("show-text");
-
-      closeAccordionItems();
-      if (!isOpen) {
-        showText.style.display = "block";
-        accordionItems[i].classList.add("show-text");
-      }
-    });
-  }
-
-  function closeAccordionItems() {
-    for (let i = 0; i < accordionItems.length; i++) {
-      accordionItems[i].classList.remove("show-text");
-      accordionItems[i].nextElementSibling.style.display = "none";
-    }
-  }
-});
-
 window.addEventListener("scroll", animateOnScroll);
 window.addEventListener("scroll", changeBgOnScroll);
 window.addEventListener("scroll", changeLinkColor);
@@ -44,6 +20,36 @@ function animateOnScroll() {
     }
   }
 }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  let accordionItems = document.getElementsByClassName("accordion-text");
+
+  for (let i = 0; i < accordionItems.length; i++) {
+    accordionItems[i].addEventListener("click", () => {
+      let showText = accordionItems[i].nextElementSibling;
+      let isOpen = accordionItems[i].classList.contains("show-text");
+
+      closeAccordionItems();
+      if (!isOpen) {
+        showText.style.display = "block";
+        accordionItems[i].classList.add("show-text");
+      
+      }
+    });
+  }
+
+
+  function closeAccordionItems() {
+    for (let i = 0; i < accordionItems.length; i++) {
+      accordionItems[i].classList.remove("show-text");
+      accordionItems[i].nextElementSibling.style.display = "none";
+    }
+ 
+  }
+
+  
+});
 
 function changeBgOnScroll() {
   let scrollMenu = document.getElementsByClassName("nav-ul")[0];
