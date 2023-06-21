@@ -578,9 +578,10 @@ font-weight: bold;
     }
 /*Code ends here*/
 /*Code for the 9th section*/
+
 .business{
     background-color: #f7f7f7;
-    z-index: -99999;
+
 
 }
 .business h1{
@@ -639,9 +640,7 @@ font-weight: bold;
     font-size: 1rem;
 }  
 
-.business-idea.show-text h5::after {
-    content: "-";
-}
+
 .business-questions{
     display: inline;
     
@@ -664,7 +663,7 @@ padding: 11px;
     font-size: 1rem;
   
 }
-.show-text{
+.show-text {
     display: block;
     transition: ease-in .3s;
   
