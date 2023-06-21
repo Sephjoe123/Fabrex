@@ -43,12 +43,14 @@ display: inline-block;
 .nav-ul{
 list-style-type: none;
 margin: 0;
-background-color: var(--white-color);
+
 overflow: hidden;
 padding: 20px;
 text-align: right;
 }
-
+.background-scroll{
+    background-color: var(--white-color);
+}
 .nav-img{
     float: left;
     width: 6.5%;
@@ -56,13 +58,16 @@ text-align: right;
     left: 350px;
 }
 li a{
-    color: var(--black-color);
+    color: var(--white-color);
     text-decoration: none;
     padding: 10px 5px;
     font-size: 0.87rem;
     font-weight: bold;  
     align-items: center;
     text-transform: uppercase; 
+}
+li.active a {
+    color: red;
 }
 a:hover{
     transition: .5s;
@@ -172,6 +177,49 @@ h3.btn:hover{
     background-color: #4e54c8;
     cursor: pointer;
 }
+
+.video-btn{
+    height: 10px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 1.5rem;
+     position: absolute;
+     left: 170px;
+     top: -8px;
+     border: 1px solid ;
+     
+}
+.video-items{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+}
+.video-items .btn{
+height: 50px;
+}
+.video-items i{
+    font-size: 0.9rem;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+#cart{
+    top: 150px;
+}
+.cart-container i{
+    color: gray;
+    font-size: 0.9rem;
+    position: fixed;
+    right: 0;
+    top : 100px;
+    background-color: #fff;
+    padding: 7px 15px;
+    z-index: 999999;
+}
+#envelope{
+top: 200px;
+}
+
 /*Home section ends here*/
 
 /*code for second section */
@@ -182,6 +230,7 @@ h3.btn:hover{
     text-align: center;
     height: 600px;
     animation: slideFromBottom .9s ease-in-out;
+    z-index: -99999;
     }
     .services h2{
         color: var(--header-color);
@@ -248,6 +297,7 @@ h3.btn:hover{
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 
 /*ends here */
@@ -255,6 +305,7 @@ h3.btn:hover{
 /*Code for third section*/
 .features{
     background-color: #f7f7f7;
+    z-index: -99999;
   
 }
 .features h1{
@@ -331,6 +382,7 @@ h5.btn:hover{
     background: var(--linear-gradient);
     height: 330px;
     color: var(--white-color);
+    z-index: -99999;
 }
 
 #logo-wrap{
@@ -356,6 +408,7 @@ h5.btn:hover{
 .pricing{
     background: #f7f7f7;
     height: 800px;
+    z-index: -99999;
 }
 .pricing h1{
   font-size: 2.05rem;
@@ -449,6 +502,7 @@ font-weight: bold;
     background-color: var(--white-color);
     height: 600px;
     text-align: center;
+    z-index: -99999;
 }
     .client h1{
         font-size: 2rem;
@@ -481,6 +535,7 @@ font-weight: bold;
     position: relative;
     text-align: center;  
     color: var(--white-color);
+    z-index: -99999;
 }
 .work h1{
     color: var(--white-color);
@@ -490,6 +545,16 @@ font-weight: bold;
     top: 30;
     left: 45%; 
 }
+.video-items{
+    position: relative;
+}
+.play-circle{
+    position: absolute;
+    left: 170px;
+    bottom: 50px; 
+}
+
+
 .work h2  {
     font-size: 1.1rem;
 }
@@ -515,58 +580,105 @@ font-weight: bold;
 /*Code for the 9th section*/
 .business{
     background-color: #f7f7f7;
+    z-index: -99999;
 
 }
 .business h1{
     font-size: 1.7rem;
     word-spacing: 3px;
-    margin-left: 2rem;
+    margin-left: 2.5rem;
 }
 .line-break{
     display: none;
 }
 
+
 .business-img{
   width: 520px;
 }
-.dropdown,.dropdown-2,.dropdown-3{
+.business-idea{
     position: relative;
-    background-color: rgb(239, 239, 239);
-    padding: 15px;
-    color: rgb(111, 111, 111);
-    font-size: 0.95rem;
-    border: 0.5px solid var(--white-color);
-    max-width: 100%;
+}
+.business-text {
+   display: none;
+  }
+.business-idea h5{
+    font-weight: 100;
+    font-size: 0.9rem;
+    color: #6f6f6f;
+    background-color: #efefef;
+    padding: 20px 15px;
+    position: relative;
 }
 
-.dropdown-content,.dropdown-content-2,.dropdown-content-3{
-    display: none;
-    position: absolute;
+ .slide-transition {
+    transition: 2s ease;
+  }
+  
+  .slide-transition.slide-out {
+    transform: translateY(100%);
+  }
+
+.business-idea h5, .business-idea p{
+    margin: 2px;
+    width: 700px; 
+    transition: ease-in .3s;
+}
+.business-idea p{
     font-size: 0.9rem;
-    padding: 10px;
-    padding-top: 30px;
+    margin: 20px;
+    
 }
-.dropdown-content .dropdown-sign, 
-.dropdown-content-2 .dropdown-sign-2,
-.dropdown-content-3 .dropdown-sign-2{
+
+.accordion-text::after{
+    content: "+";
+    position: absolute;
+    right: 16px;
+    color: #0a58ca;
+    bottom: 17px;
+    font-size: 1rem;
+}  
+
+.business-idea.show-text h5::after {
+    content: "-";
+}
+.business-questions{
+    display: inline;
+    
+}
+.circle-styling{
+width: 10px;
+height: 10px;
+border-radius: 50%;
+position: absolute;
+right: 10px;
+border: 1px solid #0a58ca;
+padding: 11px;
+}
+.show-text::after{
+    content: "-";
+    position: absolute;
+    right: 16px;
+    color: #0a58ca;
+    bottom: 17px;
+    font-size: 1rem;
+  
+}
+.show-text{
     display: block;
+    transition: ease-in .3s;
+  
 }
-.dropdown:hover .dropdown-content,
-.dropdown-2:hover .dropdown-content-2,
-.dropdown-3:hover .dropdown-content-3{
-    display: block;
-    background:#f7f7f7;
-}
-.dropdown:hover,.dropdown-2:hover,.dropdown-3:hover{
-    margin-bottom: 5rem;
-    transition: all ease-in-out .6s;
-}
+
+
+
 
 /*Code ends here*/
 /*Code for the 10th section*/
 .blog{
     background-color: var(--white-color);
     height: 750px;
+    z-index: -99999;
 }
 .blog h1
 {
