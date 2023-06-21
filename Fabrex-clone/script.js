@@ -2,26 +2,6 @@ let menu = document.getElementsByClassName("menu")[0];
 let searchBtnClose = Array.from(document.getElementsByTagName("i"));
 let links = Array.from(document.querySelectorAll(" .menu li a"));
 
-window.addEventListener("scroll", animateOnScroll);
-window.addEventListener("scroll", changeBgOnScroll);
-window.addEventListener("scroll", changeLinkColor);
-window.addEventListener("scroll", changeMenuImg);
-
-function animateOnScroll() {
-  let reveal = document.getElementsByClassName("visible");
-  for (let i = 0; i < reveal.length; i++) {
-    let scrollHeight = window.innerHeight;
-    let scrollTop = reveal[i].getBoundingClientRect().top;
-    let revealPoint = 100;
-    if (scrollTop < scrollHeight - revealPoint) {
-      reveal[i].classList.add("show");
-    } else {
-      reveal[i].classList.remove("show");
-    }
-  }
-}
-
-
 document.addEventListener("DOMContentLoaded", function () {
   let accordionItems = document.getElementsByClassName("accordion-text");
 
@@ -50,6 +30,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   
 });
+
+window.addEventListener("scroll", animateOnScroll);
+window.addEventListener("scroll", changeBgOnScroll);
+window.addEventListener("scroll", changeLinkColor);
+window.addEventListener("scroll", changeMenuImg);
+
+function animateOnScroll() {
+  let reveal = document.getElementsByClassName("visible");
+  for (let i = 0; i < reveal.length; i++) {
+    let scrollHeight = window.innerHeight;
+    let scrollTop = reveal[i].getBoundingClientRect().top;
+    let revealPoint = 100;
+    if (scrollTop < scrollHeight - revealPoint) {
+      reveal[i].classList.add("show");
+    } else {
+      reveal[i].classList.remove("show");
+    }
+  }
+}
 
 function changeBgOnScroll() {
   let scrollMenu = document.getElementsByClassName("nav-ul")[0];
