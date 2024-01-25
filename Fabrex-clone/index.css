@@ -46,7 +46,19 @@ margin: 0;
 
 overflow: hidden;
 padding: 20px;
-text-align: right;
+
+}
+.fa-search{
+    color: var(--white-color)
+}
+
+.fa-search:hover{
+    cursor: pointer;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    width: 130%;
 }
 .background-scroll{
     background-color: var(--white-color);
@@ -187,6 +199,7 @@ h3.btn:hover{
      left: 170px;
      top: -8px;
      border: 1px solid ;
+    
      
 }
 .video-items{
@@ -202,9 +215,14 @@ height: 50px;
     position: absolute;
     right: 15px;
     top: 15px;
+   
+}
+.video-btn:hover{
+    cursor: pointer;
+   
 }
 #cart{
-    top: 150px;
+    top: 240px;
 }
 .cart-container i{
     color: gray;
@@ -213,11 +231,20 @@ height: 50px;
     right: 0;
     top : 100px;
     background-color: #fff;
-    padding: 7px 15px;
-    z-index: 999999;
+    padding: 10px 15px;
+    z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 #envelope{
 top: 200px;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.cloud-img{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    top: 10px;
+    
 }
 
 /*Home section ends here*/
@@ -581,7 +608,7 @@ font-weight: bold;
 
 .business{
     background-color: #f7f7f7;
-
+    z-index: -100;
 
 }
 .business h1{
