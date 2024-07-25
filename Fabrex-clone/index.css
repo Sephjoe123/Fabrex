@@ -1687,7 +1687,6 @@ margin: auto;
 /*Nav menu media query*/
 @media screen and (max-width: 1020px) {
     .menu {
-        display: none;
         flex-direction: column;
         width: 110%;
         text-align: center;
