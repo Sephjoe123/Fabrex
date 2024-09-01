@@ -63,12 +63,10 @@ span{
         width: 130%;  
 }
 
-.nav-img{
-    float: left;
-    width: 6.5%;
+.nav-img {
+    width: 100px;
     position: absolute;
-    left: 350px;
-    
+    left: 360px;
 }
 .nav-ul li a{
     color: #000
@@ -568,14 +566,11 @@ top: 5%;
 
 @media screen and (min-width: 991px) and (max-width: 1310px){
    
-    .nav-img{
-        position: absolute;
-        left: 10px;
-        bottom: 15px;
-        
+    .nav-img {
+        left: 100px;
+        width: 8%;
     }
 }
-
 /*Nav menu media query*/
 @media screen and (max-width: 992px) {
     .menu {

@@ -63,12 +63,10 @@ span{
         width: 130%;  
 }
 
-.nav-img{
-    float: left;
-    width: 6.5%;
+.nav-img {
+    width: 100px;
     position: absolute;
-    left: 350px;
-    
+    left: 360px;
 }
 .nav-ul li a{
     color: #000
@@ -787,5 +785,12 @@ textarea{
     }
     .cart-container{
         display: none;
+    }
+}
+@media screen and (min-width: 991px) and (max-width: 1310px){
+   
+    .nav-img {
+        left: 100px;
+        width: 8%;
     }
 }

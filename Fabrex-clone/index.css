@@ -69,8 +69,9 @@ h1{
 
 .nav-img {
     width: 100px;
-    position: relative;
-    right: 440;
+    position: absolute;
+    left: 360px;
+    margin-top: -0.8rem;
 }
 
 .nav-ul li a {
@@ -209,9 +210,6 @@ a:hover {
     top: -20;
 }
 
-
-
-
 /*code for the home section -1st section*/
 .home{
 background: url(https://fabrex.websitelayout.net/demos/startup-agency/img/banner/banner.jpg);
@@ -230,14 +228,13 @@ background: var(--linear-gradient);
 content: '';
 position: absolute;
 width: 100%;
-height: 100vh;
+height: 100%;
 top: 0;
 left: 0;
 opacity: 0.9;
 z-index: -2;
 
 }
-
 .header-text{
 color :var(--white-color);
 margin: 170px 0;
@@ -258,10 +255,8 @@ font-size: 0.9rem;
 
 }
 .header-img{
-    max-width: 100%;
-    margin-top: 5rem;
-    
-    
+    width: 100%;
+    margin-top: 5rem;   
 }
 li a.dropdown{
     position: relative;
@@ -1176,37 +1171,40 @@ top: 5%;
 
 
 @media (max-width: 992px) {
-   #header-container{
-     flex-direction: column;
-     margin-top: 1rem;
-     align-items: center;
-     gap: 1rem;
+    #header-container{
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+      
+      } 
    
-
-   } 
-   .break-3{
-    display: none;
-}
-   #header-container h1{
-    font-size: 1.7rem;
-    line-height: 2rem;
-    width: 95%;
-    
-}
-.header-text{
-    margin: 0;
-}
-#header-container p{
-width: 98%;
-line-height: 1.6rem;
-font-size: 0.9rem;
-
-}
+      .break-3{
+       display: none;
+   }
+      #header-container h1{
+       font-size: 1.7rem;
+       line-height: 2rem;
+       width: 90%;
+       
+   }
+   .header-text{
+       display: block;
+       margin: 50 0;  
+   }
+   #header-container p{
+   line-height: 1.6rem;
+   font-size: 0.9rem;
+   width: 90%;
+       
+   }
 #header-container br{
     display: none;
 }
 #header-container img{
-    width: 90%;
+    width: 60%;
+    display: block;
+    margin: auto;
+    margin-bottom: 5rem;
 }
 .video-btn{
     height: 10px;
@@ -1555,6 +1553,41 @@ margin: auto;
 }
 
 
+@media screen and (min-width: 850px) and (max-width: 991px){
+    #header-container h1{
+        width: 70%; 
+      
+    }
+  
+    
+    .header-text{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+         
+        
+    }
+    #header-container p{
+    width: 70%;
+   
+    }
+    .video-items{
+        align-self: flex-start;
+        margin-left: 7.5rem;
+    }
+
+ #header-container img{
+     width: 60%;
+     display: block;
+     margin: auto;
+     margin-bottom: 3rem;
+ }
+ #logo-wrap{
+    grid-template-columns: 1fr  1fr;
+    gap: 4rem;
+ }
+}
+
 @media screen and (min-width: 580px) and (max-width: 768px){
 .box-container{
     width: 75%;
@@ -1591,6 +1624,15 @@ margin: auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
      }
+     #header-container{
+      
+        gap: 1rem;
+        margin-left: 5rem;
+     
+    }
+    .header-img{
+        width: 50%;
+    }
      
     .box-container{
         width: 75%;
@@ -1633,10 +1675,53 @@ margin: auto;
     #card-container,.blog-container,#tool-container{
         width: 95%;
     }
+    .home{
+       height: 70%;
+        
+        }
+        
+        .home::before{
+        height: 70vh;
+       
+        }
+  
+.header-text{
+    color :var(--white-color);
+    margin: 170px 0px;
+    
+    }
+    
+    .header-text > h1{
+       font-size: 2rem;
+       width: 70%;
+    }
+    .header-text p{
+    font-size: 0.9rem;
+    width: 70%;
+
+    }
+    #header-container{
+        display: flex;
+        gap: 1rem;
+        margin-left: 5rem;
+     
+    }
+    .header-img{
+        position: relative;
+        left: -10rem;
+        width: 120%;
+        margin-top: 7rem;
+    }
     .business-idea h5, .business-idea p{
         width: 100%; 
         margin: 0 -10;
     }
+    .nav-img {
+        
+        left: 70px;
+       
+    }
+    
    
     #tool-container img{
         width: 110%;
@@ -1679,7 +1764,9 @@ margin: auto;
     .box{
         padding-bottom: 4%;
     }
-    
+    .work p{
+        font-size: 0.75rem;
+    }
     
 }
 
